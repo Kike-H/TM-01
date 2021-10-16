@@ -6,33 +6,11 @@ Design a Turing machine that accepts the set of strings with the same number of 
 
 [Python 3](https://www.python.org/downloads/) 
 
-[Virtual environment](https://pypi.org/project/virtualenv/)
-
 ## How to run?
 
-1. You need to create a [virtual environment](https://pypi.org/project/virtualenv/) for python
+1. You need to activate the virtual environment
 
-```shell
-virtualenv venv 
-```
-2. You need to activate the virtual environment
-
-> MacOs/Linux
-
-```shell
-source venv/bin/activate
-```
-> Windows
-```cmd
-.\venv\Scripts\activate
-```
-
-3. install dependencies 
-
-```shell
-pip install -r requirements.txt
-```
-4. Run the script 
+> Run the script 
 
 ```shell
 python ./src/main.py

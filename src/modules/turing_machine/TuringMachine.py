@@ -12,6 +12,7 @@ class TuringMachine(object):
         self.blue = '\u001b[34m'
         self.yellow = '\u001b[33m'
         self.white = '\u001b[37m'
+        self.purple = '\u001b[35m'
 
     def q0(self, symbol:str):
         if (symbol == '0'):
@@ -138,13 +139,18 @@ class TuringMachine(object):
 
     def print_step(self):
         print("| ", end="")
+        i = 0
         for c in self.input_string:
-            if(c == 'X'):
-                print(self.red+c+self.white+" |", end=" ")
-            elif(c == 'Y'):
-                print(self.blue+c+self.white+" |", end=" ")
-            elif(c == '0'):
-                print(self.green+c+self.white+" |", end=" ")
-            elif(c == '1'):
-                print(self.yellow+c+self.white+" |", end=" ")
-        print()
+            if(i == self.position):
+                print(self.purple+c+self.white+" |", end=" ")
+            else:
+                if(c == 'X'):
+                    print(self.red+c+self.white+" |", end=" ")
+                elif(c == 'Y'):
+                    print(self.blue+c+self.white+" |", end=" ")
+                elif(c == '0'):
+                    print(self.green+c+self.white+" |", end=" ")
+                elif(c == '1'):
+                    print(self.yellow+c+self.white+" |", end=" ")
+            i = i+1
+        print(" "+self.actual_state)    
